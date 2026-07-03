@@ -9,14 +9,14 @@ This repo is both the plugin and its marketplace: `.claude-plugin/marketplace.js
 ## Install
 
 ```
-/plugin marketplace add Copiapoa-Inc/palate-claude-plugin
+/plugin marketplace add abbey-titcomb/palate-claude-plugin
 /plugin install palate@palate
 ```
 
 Or from the terminal:
 
 ```
-claude plugin marketplace add Copiapoa-Inc/palate-claude-plugin && claude plugin install palate@palate
+claude plugin marketplace add abbey-titcomb/palate-claude-plugin && claude plugin install palate@palate
 ```
 
 Enter your Palate API key (from https://palate.inc/settings/keys) when prompted.
