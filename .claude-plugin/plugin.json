@@ -1,0 +1,22 @@
+{
+  "name": "palate",
+  "version": "0.1.0",
+  "description": "Query experts' source material — paid newsletters, podcasts, private notes, archives — with citations back to source.",
+  "author": { "name": "Palate", "url": "https://palate.inc" },
+  "homepage": "https://palate.inc/for-agents",
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "Palate API Key",
+      "description": "Get one at https://palate.inc/settings/keys",
+      "sensitive": true
+    }
+  },
+  "mcpServers": {
+    "palate": {
+      "type": "http",
+      "url": "https://palate.inc/mcp",
+      "headers": { "palate-api-key": "${user_config.api_key}" }
+    }
+  }
+}

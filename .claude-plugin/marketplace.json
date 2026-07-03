@@ -1,0 +1,12 @@
+{
+  "name": "palate",
+  "owner": { "name": "Palate", "email": "hello@palate.inc" },
+  "plugins": [
+    {
+      "name": "palate",
+      "source": "./",
+      "description": "Query experts' source material — paid newsletters, podcasts, private notes, archives — with citations back to source.",
+      "version": "0.1.0"
+    }
+  ]
+}
