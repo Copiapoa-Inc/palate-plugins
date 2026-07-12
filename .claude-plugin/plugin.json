@@ -1,7 +1,7 @@
 {
   "name": "palate",
-  "version": "0.1.0",
-  "description": "Query experts' source material — paid newsletters, podcasts, private notes, archives — with citations back to source.",
+  "version": "0.2.0",
+  "description": "Save and organize your source material — links, papers, podcasts, videos, feeds — into collections your AI can query with citations.",
   "author": { "name": "Palate", "url": "https://palate.inc" },
   "homepage": "https://palate.inc/for-agents",
   "userConfig": {
@@ -16,7 +16,7 @@
     "palate": {
       "type": "http",
       "url": "https://palate.inc/mcp",
-      "headers": { "palate-api-key": "${user_config.api_key}" }
+      "headers": { "palate-api-key": "${user_config.api_key}", "palate-client": "claude-plugin" }
     }
   }
 }
