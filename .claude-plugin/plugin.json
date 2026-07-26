@@ -1,6 +1,7 @@
 {
   "name": "palate",
-  "version": "0.3.0",
+  "displayName": "Palate",
+  "version": "0.3.1",
   "description": "Save and organize your source material - links, papers, podcasts, videos, feeds - into collections your AI can query with citations.",
   "author": { "name": "Palate", "url": "https://palate.inc" },
   "homepage": "https://palate.inc/for-agents",
