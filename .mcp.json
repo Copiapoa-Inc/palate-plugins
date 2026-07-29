@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "palate": {
+      "type": "http",
+      "url": "https://palate.inc/mcp",
+      "headers": { "palate-client": "claude-plugin" }
+    }
+  }
+}
