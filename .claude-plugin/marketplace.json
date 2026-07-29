@@ -8,7 +8,7 @@
       "displayName": "Palate",
       "source": "./",
       "description": "Save and organize your source material - links, papers, podcasts, videos, feeds - into collections your AI can query with citations.",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "author": { "name": "Palate" },
       "homepage": "https://palate.inc/for-agents",
       "repository": "https://github.com/Copiapoa-Inc/palate-claude-plugin",
