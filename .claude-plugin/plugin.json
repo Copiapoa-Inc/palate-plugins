@@ -1,10 +1,18 @@
 {
   "name": "palate",
   "displayName": "Palate",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Save and organize your source material - links, papers, podcasts, videos, feeds - into collections your AI can query with citations.",
-  "author": { "name": "Palate", "url": "https://palate.inc" },
+  "author": {
+    "name": "Palate",
+    "url": "https://palate.inc"
+  },
   "homepage": "https://palate.inc/for-agents",
   "repository": "https://github.com/Copiapoa-Inc/palate-claude-plugin",
-  "keywords": ["mcp", "research", "citations", "sources", "knowledge"]
+  "keywords": [
+    "palate",
+    "save to palate",
+    "palate collections"
+  ],
+  "license": "MIT"
 }
