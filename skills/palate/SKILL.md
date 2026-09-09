@@ -1,7 +1,6 @@
 ---
 name: palate
 description: Save and query Palate, the user's library of source material, with citations. Use when the user mentions Palate, shares a link and asks to save/keep/add it, or asks to query, search, track, download, or check the latest from their collections. Do NOT use for general web search or for sources the user hasn't connected to Palate.
-context: fork
 compatibility: Requires network access. Authentication is handled by the plugin's MCP server connection.
 metadata:
   author: palate
