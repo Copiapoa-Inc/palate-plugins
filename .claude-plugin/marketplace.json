@@ -11,7 +11,7 @@
       "displayName": "Palate",
       "source": "./",
       "description": "Save and organize your source material - links, papers, podcasts, videos, feeds - into collections your AI can query with citations.",
-      "version": "0.3.3",
+      "version": "0.4.0",
       "author": {
         "name": "Palate"
       },

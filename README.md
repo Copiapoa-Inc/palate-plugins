@@ -1,10 +1,26 @@
-# Palate - Claude Code plugin
+# Palate plugin
 
 Connects Claude Code (and Claude Desktop's Code tab) to Palate's hosted MCP server with a keyless install: the plugin registers `https://palate.inc/mcp` URL-only, and Claude Code's native OAuth flow signs the user in with a one-time browser approval. No API key, no installer document, no agent-written config.
 
 It also bundles the thin Palate skill, which routes the agent to the canonical behavior contract at `https://palate.inc/SKILL.md` (fetched at runtime - the plugin never freezes behavior).
 
 This repo is both the plugin and its marketplace: `.claude-plugin/marketplace.json` points at `./`, so adding the repo as a marketplace exposes the plugin directly.
+
+## Two packaging formats, one plugin
+
+The repo ships the same skill and the same MCP server in two manifests.
+Both read `skills/`, so there is one copy of the skill and no drift between formats.
+
+| Format | Manifest | MCP config | Used by |
+| --- | --- | --- | --- |
+| Claude plugin | `.claude-plugin/plugin.json` | `.mcp.json` | Claude Code, Claude Desktop |
+| Agent Plugins 1.0.0 | `plugin.json` | `mcp.json` | Cursor and other clients that support the open standard |
+
+Agent Plugins is a vendor-neutral standard for packaging skills and MCP servers.
+The specification is at https://agent-plugins.org.
+
+The skill frontmatter is limited to the fields the Agent Skills specification allows.
+A client that follows the standard skips a skill with any other field, so do not add one.
 
 ## Install
 
@@ -47,8 +63,15 @@ Before submitting or releasing, validate the plugin and marketplace manifests:
 claude plugin validate /path/to/palate-claude-plugin
 ```
 
+### Test the Agent Plugins format
+
+Cursor loads a plugin from a local folder.
+Copy `plugin.json`, `mcp.json`, `LICENSE`, and `skills/` into `~/.cursor/plugins/local/palate`, then restart Cursor.
+
+Validate both manifests against the published schemas at https://agent-plugins.org/schemas/1.0.0/, and validate the skill with the Agent Skills reference validator.
+
 ## Roadmap
 
-1. Team-test while private.
-2. Flip the repo public -> external users install with the commands above; palate.inc gains a Claude Code one-liner and `install.md` gains a router line pointing here.
-3. Submit to Anthropic's community marketplace (https://platform.claude.com/plugins/submit) for browsable discovery across Claude Code, Desktop, and claude.ai.
+1. Submit to Anthropic's community marketplace (https://platform.claude.com/plugins/submit) for discovery across Claude Code, Desktop, and claude.ai.
+2. Submit to the Cursor marketplace, which accepts the Agent Plugins format.
+3. Keep the xAI catalog entry pinned to a current commit.
