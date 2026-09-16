@@ -25,14 +25,14 @@ A client that follows the standard skips a skill with any other field, so do not
 ## Install
 
 ```
-/plugin marketplace add Copiapoa-Inc/palate-claude-plugin
+/plugin marketplace add Copiapoa-Inc/palate-plugins
 /plugin install palate@palate
 ```
 
 Or from the terminal:
 
 ```
-claude plugin marketplace add Copiapoa-Inc/palate-claude-plugin && claude plugin install palate@palate
+claude plugin marketplace add Copiapoa-Inc/palate-plugins && claude plugin install palate@palate
 ```
 
 Then sign in: Claude Code flags the `palate` server as needing authentication (you'll see a startup notice, or run `/mcp`). Select the server, choose Authenticate, and approve access in the browser. Done - no key ever touches your config.
@@ -52,7 +52,7 @@ The plugin ships without a key field on purpose: plugin manifests can't include 
 ## Test locally
 
 ```
-claude --plugin-dir /path/to/palate-claude-plugin
+claude --plugin-dir /path/to/palate-plugins
 ```
 
 Confirm the `palate` MCP server appears, complete the OAuth approval via `/mcp`, and check that the Palate tools load.
@@ -60,7 +60,7 @@ Confirm the `palate` MCP server appears, complete the OAuth approval via `/mcp`,
 Before submitting or releasing, validate the plugin and marketplace manifests:
 
 ```
-claude plugin validate /path/to/palate-claude-plugin
+claude plugin validate /path/to/palate-plugins
 ```
 
 ### Test the Agent Plugins format
