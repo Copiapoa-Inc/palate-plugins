@@ -1,4 +1,4 @@
-# Palate PLugins
+# Palate Plugins
 
 Connects Claude Code (and Claude Desktop's Code tab) to Palate's hosted MCP server with a keyless install: the plugin registers `https://palate.inc/mcp` URL-only, and Claude Code's native OAuth flow signs the user in with a one-time browser approval. No API key, no installer document, no agent-written config.
 
